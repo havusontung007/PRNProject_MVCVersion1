@@ -33,37 +33,50 @@
     <main class="login-bg">
 
         <div class="register-form-area">
-            <div class="register-form text-center">
 
-                <div class="register-heading">
-                    <span>Sign Up</span>
-                    <p>Create your account to get full access</p>
+            <form action="~/User/Register" method="post">
+                <div class="register-form text-center">
+
+                    <div class="register-heading">
+                        <span>Sign Up</span>
+                        <p>Create your account to get full access</p>
+                        @if (ViewData["message"] != null)
+                        {
+                            <p class="text-warning">@ViewData["message"].ToString()</p>
+
+                        }
+                    </div>
+
+                    <div class="input-box">
+                        <div class="single-input-fields">
+                            <label>User name</label>
+                            <input type="text" name="username" placeholder="Enter user name">
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Full name</label>
+                            <input type="text" name="fullname" placeholder="Enter full name">
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Email Address</label>
+                            <input type="email" name="email" placeholder="Enter email address">
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Password</label>
+                            <input type="password" name="password" placeholder="Enter Password">
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Confirm Password</label>
+                            <input type="password" placeholder="Confirm Password">
+                        </div>
+                    </div>
+
+                    <div class="register-footer">
+                        <p> Already have an account? <a href="/User/Login"> Login</a> here</p>
+                        <input type="submit" name="submit" class="submit-btn3" value="Sign-up" />
+                    </div>
                 </div>
 
-                <div class="input-box">
-                    <div class="single-input-fields">
-                        <label>Full name</label>
-                        <input type="text" placeholder="Enter full name">
-                    </div>
-                    <div class="single-input-fields">
-                        <label>Email Address</label>
-                        <input type="email" placeholder="Enter email address">
-                    </div>
-                    <div class="single-input-fields">
-                        <label>Password</label>
-                        <input type="password" placeholder="Enter Password">
-                    </div>
-                    <div class="single-input-fields">
-                        <label>Confirm Password</label>
-                        <input type="password" placeholder="Confirm Password">
-                    </div>
-                </div>
-
-                <div class="register-footer">
-                    <p> Already have an account? <a href="/User/Login"> Login</a> here</p>
-                    <button class="submit-btn3">Sign Up</button>
-                </div>
-            </div>
+                </form>
         </div>
 
     </main>

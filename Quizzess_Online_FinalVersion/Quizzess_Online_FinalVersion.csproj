@@ -123,9 +123,13 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QuizController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="DAO\AccountDAL.cs" />
+    <Compile Include="DAO\Database.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="NewModels\Account.cs" />
+    <Compile Include="NewModels\Encryptor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -302,6 +306,7 @@
     <Content Include="Views\Quiz\Search.cshtml" />
     <Content Include="Views\Quiz\Test.cshtml" />
     <Content Include="Views\Home\Index2.cshtml" />
+    <Content Include="Views\Shared\Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

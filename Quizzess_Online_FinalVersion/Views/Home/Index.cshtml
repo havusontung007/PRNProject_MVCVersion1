@@ -30,51 +30,11 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-area">
-            <div class="main-header header-sticky">
-                <div class="container-fluid">
-                    <div class="menu-wrapper d-flex align-items-center justify-content-between">
-                        <div class="left-content d-flex align-items-center">
-                            <div class="logo">
-                                <a href="/Home/Index"><img src="/Assets/img/logo/logo.png" alt=""></a>
-                            </div>
+    
+        @Html.Partial("~/Views/Shared/Header.cshtml")
+   
 
-                            <form action="/Quiz/Search" class="form-box">
-                                <input type="text" name="Search" placeholder="Search courses..">
-                                <div class="search-icon">
-                                    <i class="ti-search"></i>
-                                </div>
-                            </form>
-                        </div>
 
-                        <div class="main-menu d-none d-lg-block">
-                            <nav>
-                                <ul id="navigation">
-                                    <li><a href="/Home/Index2">Trang chủ</a></li>
-                                    <li><a href="/Quiz/Course">Thư viện của bạn</a></li>
-
-                                    <li>
-                                        <a href="/Quiz/Add" class="quiz-add"> Học phần mới </a>
-                                    </li>
-                                    <li>
-                                        <a href="/User/Login" class="btn header-btn2">Sign In</a>
-                                    </li>
-                                    <li>
-                                        <a href="/User/Register" class="btn header-btn2">Sign Up</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <div class="mobile_menu d-block d-lg-none"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
     <main>
 
         <div class="slider-area slider-height">

@@ -34,32 +34,45 @@
 
         <div class="login-form-area">
             <div class="login-form">
-
-                <div class="login-heading">
-                    <span>Login</span>
-                    <p>Enter Login details to get access</p>
-                </div>
-
-                <div class="input-box">
-                    <div class="single-input-fields">
-                        <label>Username or Email Address</label>
-                        <input type="text" placeholder="Username / Email address">
+               
+                <form action="~/User/Login" method="post">
+                    <div class="login-heading">
+                        <span>Login</span>
+                        <p>Enter Login details to get access</p>
                     </div>
-                    <div class="single-input-fields">
-                        <label>Password</label>
-                        <input type="password" placeholder="Enter Password">
-                    </div>
-                    <div class="single-input-fields login-check">
-                        <input type="checkbox" id="fruit1" name="keep-log">
-                        <label for="fruit1">Keep me logged in</label>
-                        <a href="#" class="f-right">Forgot Password?</a>
-                    </div>
-                </div>
+                    @if (ViewData["ErrorAccount"] != null)
+                    {
+                        <p class="text-warning">@ViewData["ErrorAccount"] </p>
+                    }
+                    @if (ViewData["RegisterSuccess"] != null)
+                    {
+                        <p class="text-warning">@ViewData["RegisterSuccess"] </p>
+                    }
+                    
 
-                <div class="login-footer">
-                    <p>Don’t have an account? <a href="/User.Register">Sign Up</a> here</p>
-                    <button class="submit-btn3">Login</button>
-                </div>
+                    <div class="input-box">
+                        <div class="single-input-fields">
+                            <label>Username or Email Address</label>
+                            <input type="text" id="login" name="username" placeholder="Username or email" autofocus="autofocus" />
+                        </div>
+                        <div class="single-input-fields">
+                            <label>Password</label>
+                            <input type="password" id="password" name="password" placeholder="password" />
+                        </div>
+                        <div class="single-input-fields login-check">
+                            <input type="checkbox" name="rememberuser" id="fruit1" >
+                            <label for="fruit1">Keep me logged in</label>
+                        
+                            <a href="#" class="f-right">Forgot Password?</a>
+                        </div>
+                    </div>
+
+                    <div class="login-footer">
+                        <p>Don’t have an account? <a href="/User/Register">Sign Up</a> here</p>
+                        <input type="submit" name="submit" class="submit-btn3" value="Login" />
+
+                    </div>
+                </form>
             </div>
         </div>
 
@@ -99,7 +112,7 @@
         gtag('config', 'UA-23581568-13');
     </script>
 </body>
-</body>
+
 
 <!-- Mirrored from preview.colorlib.com/theme/onedu/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 28 Mar 2021 14:05:07 GMT -->
 
